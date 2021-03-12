@@ -16,7 +16,7 @@ def join_data(df_1, df_2):
 
 def clean_data(df):
     print('Cleaning data...')
-    df['birthdate'] = pd.to_datetime(df['birthdate'], format='%Y-%m-%d')
+    df['birthdate'] = pd.to_datetime(df['birthdate'], format='%m%d%Y')
     assert all(df.columns == ['respondent_id','name', 'address', 'phone', 'job', 'company', 'birthdate']), "Incorrect column names in the Pandas DataFrame."
     return df
 
