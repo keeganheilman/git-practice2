@@ -23,7 +23,7 @@ def clean_data(df):
 
 def export_data(df, output_file):
     print('Exporting data to %s...' % (output_file))
-    df.to_csv(output_file, date_format = '%Y-%m-%d')
+    df.to_csv(output_file, date_format = '%Y-%m-%d', index=False)
     return 0
 
 
